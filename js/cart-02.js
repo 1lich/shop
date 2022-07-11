@@ -22,7 +22,6 @@ window.addEventListener("click", function (event) {
     const itemInCart = cartWrapper.querySelector(
       `[data-id="${productInfo.id}"]`
     );
-    console.log(itemInCart);
 
     //если товар в корзине
     if (itemInCart) {
@@ -67,5 +66,7 @@ window.addEventListener("click", function (event) {
 
     //сброс счетчика
     card.querySelector("[data-counter]").innerText = "1";
+
+    toggleCartStatus();
   }
 });

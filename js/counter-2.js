@@ -7,9 +7,7 @@ window.addEventListener("click", function (event) {
     event.target.dataset.action === "minus"
   ) {
     const counterWrapper = event.target.closest(".counter-wrapper");
-    console.log(counterWrapper);
     counter = counterWrapper.querySelector("[data-counter]");
-    console.log(counter);
   }
 
   //проверяем нажали ли мы на плюс
@@ -26,6 +24,7 @@ window.addEventListener("click", function (event) {
     ) {
       //удаляем из корзины
       event.target.closest(".cart-item").remove();
+      toggleCartStatus();
     }
   }
 });
